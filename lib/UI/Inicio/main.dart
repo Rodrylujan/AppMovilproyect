@@ -1,5 +1,8 @@
 import 'package:apps/UI/Inicio/estructura.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/provider_formulario.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: estructura()
+      home: ChangeNotifierProvider(
+        create: (_)=>provider_formulario(),
+        child: estructura(),
+      )
     );
   }
 }

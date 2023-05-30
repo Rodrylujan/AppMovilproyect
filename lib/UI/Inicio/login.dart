@@ -18,7 +18,7 @@ class login extends StatelessWidget {
               icon: Icon(Icons.email),
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 50),
           TextField(
             autofocus: true,
             obscureText: true,
@@ -27,7 +27,7 @@ class login extends StatelessWidget {
               icon: Icon(Icons.lock),
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 50),
           Container(
             width: 200,
             child: ElevatedButton(
@@ -47,7 +47,7 @@ class login extends StatelessWidget {
               child: Text("Iniciar sesión"),
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 50),
           InkWell(
             onTap: () {
               Navigator.push(
