@@ -6,20 +6,28 @@ import 'encabezado.dart';
 class estructura extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Card(
+      color: Colors.black12,
+      margin: EdgeInsets.all(40.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      child: Scaffold(
         body: Center(
           child: Container(
+            color: Colors.black12,
             child: Column(
               children: <Widget>[
-                SizedBox(height: 100),
+                const SizedBox(height: 70),
                 encabezado(),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 cuerpo(),
 
               ],
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }

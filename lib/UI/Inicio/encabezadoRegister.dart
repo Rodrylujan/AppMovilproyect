@@ -2,7 +2,7 @@ import 'package:apps/UI/Inicio/presentacion.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-class encabezado extends StatelessWidget{
+class encabezadoRegister extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,12 +16,12 @@ class encabezado extends StatelessWidget{
                 // Acción a realizar al hacer clic en el botón
                 // ...
               },
-              child: Text('salir'),
+              child: Text('Atras'),
             ),
 
           ),
           SizedBox(height: 40),
-          Text("Login",
+          Text("Register",
             style: TextStyle(
               fontSize: 50,
               fontWeight: FontWeight.bold,

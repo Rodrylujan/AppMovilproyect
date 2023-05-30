@@ -1,3 +1,4 @@
+import 'package:apps/UI/Inicio/encabezadoRegister.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/provider_formulario.dart';
@@ -9,18 +10,19 @@ import 'encabezado.dart';
 class RegistroUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //final f01 = Provider.of<provider_formulario>(context);
-    return Provider(
-      create: (BuildContext context) {  },
+    return ChangeNotifierProvider<provider_formulario>(
+      create: (_) => provider_formulario(),
       child: Material(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(10, 10, 20, 20),
+          padding: EdgeInsets.fromLTRB(50, 50, 30, 30),
           child: Form(
             //key: f01.form_provedor,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
               children: <Widget>[
-                encabezado(),
+                SizedBox(height: 30),
+                encabezadoRegister(),
+                SizedBox(height: 30),
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
@@ -82,11 +84,7 @@ class RegistroUsuario extends StatelessWidget {
                 ),
 
 
-
-
-
-
-                SizedBox(height: 30),
+                SizedBox(height: 50),
                 Container(
                   width: 200,
                   child: ElevatedButton(
@@ -106,7 +104,7 @@ class RegistroUsuario extends StatelessWidget {
                     child: Text("Registrar usuario"),
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 50),
                 InkWell(
                   onTap: () {
                     Navigator.push(
