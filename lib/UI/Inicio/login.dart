@@ -1,8 +1,8 @@
 import 'package:apps/UI/Inicio/registration.dart';
 import 'package:flutter/material.dart';
 
+import '../utilidades/validaciones.dart';
 import '../productos/productos.dart';
-import '../quienessomos/uienessomos.dart';
 
 class login extends StatelessWidget {
   @override
@@ -11,12 +11,16 @@ class login extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(10, 10, 20, 20),
       child: Column(
         children: <Widget>[
-          TextField(
+          TextFormField(
             autofocus: true,
             decoration: InputDecoration(
               hintText: 'Ingrese su correo',
               icon: Icon(Icons.email),
             ),
+            validator: (value){
+              return validaciones.validar_Corrreo(value);
+            },
+            //onChanged: (value) =>f01.casillero01,
           ),
           SizedBox(height: 50),
           TextField(

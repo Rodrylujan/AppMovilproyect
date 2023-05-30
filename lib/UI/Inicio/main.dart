@@ -21,7 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       home: ChangeNotifierProvider(
         create: (_)=>provider_formulario(),
-        child: estructura(),
+        child: Container(
+          color: Colors.black12,
+          child: estructura(),
+        )
       )
     );
   }
