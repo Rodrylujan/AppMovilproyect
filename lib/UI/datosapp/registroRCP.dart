@@ -1,17 +1,25 @@
-import 'package:apps/UI/Inicio/encabezadoRegister.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/provider_formulario.dart';
 import '../quienessomos/uienessomos.dart';
 import '../utilidades/validaciones.dart';
 
-class RegistroUsuario extends StatelessWidget {
+class registroRCP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<provider_formulario>(
       create: (_) => provider_formulario(),
-      child: Material(
-        child: Padding(
+      child: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context); // Regresar a la pantalla anterior
+            },
+          ),
+          title: Text('Registro RCP'),
+        ),
+        body: Padding(
           padding: EdgeInsets.fromLTRB(50, 50, 30, 30),
           child: Form(
             //key: f01.form_provedor,
@@ -19,21 +27,28 @@ class RegistroUsuario extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(height: 30),
-                encabezadoRegister(),
-                SizedBox(height: 30),
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                    hintText: 'Ingrese sus nombre',
-                    icon: Icon(Icons.person),
+                    hintText: 'SpO2',
+                    icon: Icon(Icons.monitor),
                   ),
                 ),
                 SizedBox(height: 30),
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                    hintText: 'Ingrese su apellidos',
-                    icon: Icon(Icons.person),
+                    hintText: 'PRBPM',
+                    icon: Icon(Icons.favorite),
+                  ),
+                ),
+
+                SizedBox(height: 30),
+                TextFormField(
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    hintText: 'Presión Sistólica',
+                    icon: Icon(Icons.arrow_upward),
                   ),
                 ),
 
@@ -41,47 +56,10 @@ class RegistroUsuario extends StatelessWidget {
                 TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                    hintText: 'Fecha de nacimiento',
-                    icon: Icon(Icons.calendar_month),
-                  ),
-                  validator: (value){
-                    return validaciones.Validar_fecha(value);
-                  },
-                  //onChanged: (value) =>f01.casillero02,
-                ),
-
-                SizedBox(height: 30),
-                TextFormField(
-                  autofocus: true,
-                  decoration: InputDecoration(
-                    hintText: 'Ingrese su correo',
-                    icon: Icon(Icons.email),
-                  ),
-                  validator: (value){
-                    return validaciones.validar_Corrreo(value);
-                  },
-                  //onChanged: (value) =>f01.casillero01,
-                ),
-                SizedBox(height: 30),
-                TextFormField(
-                  autofocus: true,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Ingrese su contraseña',
-                    icon: Icon(Icons.lock),
+                    hintText: 'Presión Diastólica',
+                    icon: Icon(Icons.arrow_downward),
                   ),
                 ),
-                SizedBox(height: 30),
-                TextFormField(
-                  autofocus: true,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Confirme su contraseña',
-                    icon: Icon(Icons.lock),
-                  ),
-                ),
-
-
                 SizedBox(height: 50),
                 Container(
                   width: 200,
@@ -94,12 +72,23 @@ class RegistroUsuario extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      //Navigator.push(
-                        //context,
-                        //MaterialPageRoute(builder: (context) => productos()),
-                      //);
+                      // Acciones al presionar el botón de registrar
+                      // Obtener los valores de los campos de entrada
+                      // String spo2 = spo2Controller.text;
+                      // String prbpm = prbpmController.text;
+                      // String presionSistolica = presionSistolicaController.text;
+                      // String presionDiastolica = presionDiastolicaController.text;
+
+                      // Realizar el registro con los datos obtenidos
+                      // ...
+
+                      // Limpiar los campos de entrada
+                      // spo2Controller.clear();
+                      // prbpmController.clear();
+                      // presionSistolicaController.clear();
+                      // presionDiastolicaController.clear();
                     },
-                    child: Text("Registrar usuario"),
+                    child: Text("Registrar"),
                   ),
                 ),
                 SizedBox(height: 50),

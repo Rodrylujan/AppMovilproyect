@@ -1,10 +1,12 @@
 import 'package:apps/UI/Inicio/registration.dart';
+import 'package:apps/UI/datosapp/menuApp.dart';
+import 'package:apps/UI/datosapp/registroRCP.dart';
+import 'package:apps/UI/datosapp/perfilUsuario.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/provider_formulario.dart';
 import '../utilidades/validaciones.dart';
-import '../productos/productos.dart';
 
 class cuerpo extends StatelessWidget {
   @override
@@ -48,7 +50,7 @@ class cuerpo extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => productos()),
+                  MaterialPageRoute(builder: (context) => menuApp()),
                 );
               },
               child: Text("Iniciar sesión"),
