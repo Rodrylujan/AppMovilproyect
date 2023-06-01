@@ -1,4 +1,5 @@
 import 'package:apps/UI/Inicio/estructura.dart';
+import 'package:apps/UI/datosapp/menuApp.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         create: (_)=>provider_formulario(),
         child: Container(
           color: Colors.black12,
-          child: estructura(),
+          child: menuApp(),
         )
       )
     );

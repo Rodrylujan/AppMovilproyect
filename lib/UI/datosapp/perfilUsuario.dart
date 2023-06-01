@@ -16,7 +16,7 @@ class perfilUsuario extends StatelessWidget {
         title: Text('Perfil'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.fromLTRB(50, 50, 30, 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -1,10 +1,7 @@
-import 'package:apps/UI/Inicio/registration.dart';
+import 'package:apps/UI/Inicio/registrousuario.dart';
 import 'package:apps/UI/datosapp/menuApp.dart';
-import 'package:apps/UI/datosapp/registroRCP.dart';
-import 'package:apps/UI/datosapp/perfilUsuario.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../provider/provider_formulario.dart';
 import '../utilidades/validaciones.dart';
 
@@ -13,19 +10,19 @@ class cuerpo extends StatelessWidget {
   Widget build(BuildContext context) {
     final f01 = Provider.of<provider_formulario>(context);
     return Padding(
-      padding: EdgeInsets.fromLTRB(10, 10, 20, 20),
+      padding: const EdgeInsets.fromLTRB(10, 10, 20, 20),
       child: Column(
         children: <Widget>[
           TextFormField(
             autofocus: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: 'Ingrese su correo',
               icon: Icon(Icons.email),
             ),
             validator: (value){
               return validaciones.validar_Corrreo(value);
             },
-            //onChanged: (value) =>f01.casillero01,
+            onChanged: (value) =>f01.casillero01,
           ),
           SizedBox(height: 50),
           TextField(
