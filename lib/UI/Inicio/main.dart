@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         child: Container(
           color: Colors.black12,
           child: estructura(),
+
         )
       )
     );
