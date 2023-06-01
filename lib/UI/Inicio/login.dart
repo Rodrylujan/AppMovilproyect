@@ -2,7 +2,7 @@ import 'package:apps/UI/Inicio/registration.dart';
 import 'package:flutter/material.dart';
 
 import '../utilidades/validaciones.dart';
-import '../productos/productos.dart';
+import '../datosapp/menuApp.dart';
 
 class login extends StatelessWidget {
   @override
@@ -45,7 +45,7 @@ class login extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => productos()),
+                  MaterialPageRoute(builder: (context) => menuApp()),
                 );
               },
               child: Text("Iniciar sesión"),
