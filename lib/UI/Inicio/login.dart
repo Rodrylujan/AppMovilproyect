@@ -1,4 +1,4 @@
-import 'package:apps/UI/Inicio/registration.dart';
+import 'package:apps/UI/Inicio/registrousuario.dart';
 import 'package:flutter/material.dart';
 
 import '../utilidades/validaciones.dart';
