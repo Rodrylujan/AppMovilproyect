@@ -16,7 +16,7 @@ class cuerpo extends StatelessWidget {
           TextFormField(
             autofocus: true,
             decoration: const InputDecoration(
-              hintText: 'Ingrese su correo',
+              hintText: 'Ingrese su correo ',
               icon: Icon(Icons.email),
             ),
             validator: (value){
