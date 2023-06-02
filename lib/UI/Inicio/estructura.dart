@@ -21,7 +21,6 @@ class estructura extends StatelessWidget {
                 encabezado(),
                 const SizedBox(height: 70),
                 cuerpo(),
-
               ],
             ),
           ),

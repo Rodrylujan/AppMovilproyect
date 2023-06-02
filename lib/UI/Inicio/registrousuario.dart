@@ -86,8 +86,6 @@ class RegistroUsuario extends StatelessWidget {
                         icon: Icon(Icons.lock),
                       ),
                     ),
-
-
                     SizedBox(height: 50),
                     Container(
                       width: 200,
