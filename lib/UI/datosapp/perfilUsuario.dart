@@ -10,7 +10,6 @@ class perfilUsuario extends StatelessWidget {
     String fechaNacimiento = "01/01/1990";
     int edad = 33;
     List<String> numerosEmergencia = ["123456789", "987654321"];
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Perfil'),
