@@ -24,4 +24,9 @@ class validaciones{
     RegExp reg = RegExp(patron);
     return reg.hasMatch(value ?? '')?'':'9 digitos';
   }
+  static String Validar_float(value){
+    String  patron = r'^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$';
+    RegExp reg = RegExp(patron);
+    return reg.hasMatch(value ?? '')?'':'valor no valido';
+  }
 }

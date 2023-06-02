@@ -33,6 +33,10 @@ class registroRCP extends StatelessWidget {
                     hintText: 'SpO2',
                     icon: Icon(Icons.monitor),
                   ),
+                  validator: (value){
+                    return validaciones.Validar_float(value);
+                  },
+                  //onChanged: (value) =>f01.casillero03,
                 ),
                 SizedBox(height: 30),
                 TextFormField(
@@ -41,6 +45,10 @@ class registroRCP extends StatelessWidget {
                     hintText: 'PRBPM',
                     icon: Icon(Icons.favorite),
                   ),
+                  validator: (value){
+                    return validaciones.Validar_float(value);
+                  },
+                  //onChanged: (value) =>f01.casillero03,
                 ),
 
                 SizedBox(height: 30),
@@ -50,6 +58,10 @@ class registroRCP extends StatelessWidget {
                     hintText: 'Presión Sistólica',
                     icon: Icon(Icons.arrow_upward),
                   ),
+                  validator: (value){
+                    return validaciones.Validar_float(value);
+                  },
+                  //onChanged: (value) =>f01.casillero03,
                 ),
 
                 SizedBox(height: 30),
@@ -59,6 +71,10 @@ class registroRCP extends StatelessWidget {
                     hintText: 'Presión Diastólica',
                     icon: Icon(Icons.arrow_downward),
                   ),
+                  validator: (value){
+                    return validaciones.Validar_float(value);
+                  },
+                  //onChanged: (value) =>f01.casillero03,
                 ),
                 SizedBox(height: 50),
                 Container(
@@ -72,21 +88,7 @@ class registroRCP extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // Acciones al presionar el botón de registrar
-                      // Obtener los valores de los campos de entrada
-                      // String spo2 = spo2Controller.text;
-                      // String prbpm = prbpmController.text;
-                      // String presionSistolica = presionSistolicaController.text;
-                      // String presionDiastolica = presionDiastolicaController.text;
 
-                      // Realizar el registro con los datos obtenidos
-                      // ...
-
-                      // Limpiar los campos de entrada
-                      // spo2Controller.clear();
-                      // prbpmController.clear();
-                      // presionSistolicaController.clear();
-                      // presionDiastolicaController.clear();
                     },
                     child: Text("Registrar"),
                   ),
