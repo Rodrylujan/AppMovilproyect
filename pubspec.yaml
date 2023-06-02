@@ -64,6 +64,7 @@ flutter:
     - assets/images/candado.png
     - assets/images/logo.png
     - assets/images/persona.png
+    - assets/images/tutorial.png
     - assets/images/unser.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

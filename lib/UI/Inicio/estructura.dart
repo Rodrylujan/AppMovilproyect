@@ -12,6 +12,7 @@ class estructura extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Center(
           child: Container(
             color: Colors.black12,

@@ -1,5 +1,6 @@
 import 'package:apps/UI/Inicio/encabezadogereral.dart';
 import 'package:apps/UI/datosapp/perfilUsuario.dart';
+import 'package:apps/UI/datosapp/tutorialApp.dart';
 import 'package:apps/UI/datosapp/registroRCP.dart';
 import 'package:flutter/material.dart';
 
@@ -50,7 +51,10 @@ class menuApp extends StatelessWidget {
               leading: Icon(Icons.school),
               title: Text('Tutorial'),
               onTap: () {
-                // Acciones al seleccionar 'Tutorial'
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => tutorialApp()),
+                );
               },
             ),
             ListTile(

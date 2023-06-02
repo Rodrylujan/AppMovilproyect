@@ -8,6 +8,7 @@ import '../utilidades/validaciones.dart';
 class RegistroUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //final f01 = Provider.of<provider_formulario>(context);
     return ChangeNotifierProvider<provider_formulario>(
       create: (_) => provider_formulario(),
       child: Material(
@@ -33,6 +34,10 @@ class RegistroUsuario extends StatelessWidget {
                         hintText: 'Ingrese sus nombre',
                         icon: Icon(Icons.person),
                       ),
+                      validator: (value){
+                        return validaciones.Validar_name_apellido(value);
+                      },
+                      //onChanged: (value) =>f01.casillero02,
                     ),
                     SizedBox(height: 30),
                     TextFormField(
@@ -41,6 +46,10 @@ class RegistroUsuario extends StatelessWidget {
                         hintText: 'Ingrese su apellidos',
                         icon: Icon(Icons.person),
                       ),
+                      validator: (value){
+                        return validaciones.Validar_name_apellido(value);
+                      },
+                      //onChanged: (value) =>f01.casillero02,
                     ),
 
                     SizedBox(height: 30),
@@ -76,6 +85,10 @@ class RegistroUsuario extends StatelessWidget {
                         hintText: 'Ingrese su contraseña',
                         icon: Icon(Icons.lock),
                       ),
+                      validator: (value){
+                        return validaciones.Validar_password(value);
+                      },
+                      //onChanged: (value) =>f01.casillero04,
                     ),
                     SizedBox(height: 30),
                     TextFormField(
@@ -85,6 +98,10 @@ class RegistroUsuario extends StatelessWidget {
                         hintText: 'Confirme su contraseña',
                         icon: Icon(Icons.lock),
                       ),
+                      validator: (value){
+                        return validaciones.Validar_password(value);
+                      },
+                      //onChanged: (value) =>f01.casillero04,
                     ),
                     SizedBox(height: 50),
                     Container(

@@ -8,5 +8,6 @@ class AssetsRes {
   static const String CANDADO = 'assets/images/candado.png';
   static const String LOGO = 'assets/images/logo.png';
   static const String PERSONA = 'assets/images/persona.png';
+  static const String TUTORIAL = 'assets/images/tutorial.png';
   static const String UNSER = 'assets/images/unser.png';
 }
