@@ -1,7 +1,7 @@
-import 'package:apps/UI/Inicio/encabezadogereral.dart';
-import 'package:apps/UI/datosapp/perfilUsuario.dart';
-import 'package:apps/UI/datosapp/registroRCP.dart';
+
 import 'package:flutter/material.dart';
+
+import '../main/encabezadogereral.dart';
 
 class tutorialApp extends StatelessWidget {
   @override

@@ -1,8 +1,10 @@
-import 'package:apps/UI/Inicio/encabezadogereral.dart';
-import 'package:apps/UI/datosapp/perfilUsuario.dart';
-import 'package:apps/UI/datosapp/tutorialApp.dart';
-import 'package:apps/UI/datosapp/registroRCP.dart';
+
+import 'package:apps/Principal/datosapp/perfilUsuario.dart';
+import 'package:apps/Principal/datosapp/registroRCP.dart';
+import 'package:apps/Principal/datosapp/tutorialApp.dart';
 import 'package:flutter/material.dart';
+
+import '../main/encabezadogereral.dart';
 
 class menuApp extends StatelessWidget {
   @override
@@ -42,9 +44,19 @@ class menuApp extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.list),
-              title: Text('Ver Registro RC'),
+              title: Text('Seguimiento'),
               onTap: () {
                 // Acciones al seleccionar 'Ver Registro RC'
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.assignment),
+              title: Text('Regordatorio'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => registroRCP()),
+                );
               },
             ),
             ListTile(

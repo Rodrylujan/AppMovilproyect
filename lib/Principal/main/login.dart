@@ -1,4 +1,5 @@
-import 'package:apps/UI/Inicio/registrousuario.dart';
+
+import 'package:apps/view/Register/registrousuario.dart';
 import 'package:flutter/material.dart';
 
 import '../utilidades/validaciones.dart';
@@ -18,7 +19,7 @@ class login extends StatelessWidget {
               icon: Icon(Icons.email),
             ),
             validator: (value){
-              return validaciones.validar_Corrreo(value);
+              return validaciones.validarCorreo(value);
             },
             //onChanged: (value) =>f01.casillero01,
           ),

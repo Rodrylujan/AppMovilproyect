@@ -118,7 +118,7 @@ class _perfilUsuarioState extends State<perfilUsuario> {
                       hintText: 'Agregra telefono de emergencia ',
                     ),
                     validator: (value){
-                      return validaciones.Validar_telefono(value);
+                      return validaciones.validarTelefono(value);
                     },
                     //onChanged: (value) =>f01.casillero02,
                   ),
